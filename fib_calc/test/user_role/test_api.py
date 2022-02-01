@@ -38,17 +38,3 @@ def test_get_fib_function_with_positive_data(num_to_calc, expected):
         f'{link}api/v1/fibonacci?number={num_to_calc}', verify=False)
     response_body = response.json()
     assert response_body["result"] == expected
-
-
-@pytest.fixture
-def my_fixture():
-    print('1')
-    yield
-    print('2')
-
-
-def test_pytest(my_fixture):
-    print(3)
-
-
-car_makers = ['Mercedes', 'Lamborgini', 'Mitsubishi', 'Opel', 'Chevrolet']
